@@ -1,0 +1,3 @@
+- Imitation of cron scheduler in Unix systems
+- Processes to be run are parsed from cfg file
+- Does not use multi-process threading unfortunately :/
