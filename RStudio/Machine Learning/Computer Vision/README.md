@@ -1,0 +1,1 @@
+- Computer vision to detect objects using logistic regression and Excel file bit-map parsing
