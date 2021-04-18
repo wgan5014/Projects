@@ -3,3 +3,5 @@
 Face captured through webcam.<br>
 Compare camera frame image encoding to image encoding in database.<br>
 Test similarity of encodings to tolerance and determine if face within database or not.<br>
+
+*<b>Note<b>: this has been moved to RStudio/Machine Learning/Computer Vision*
