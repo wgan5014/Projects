@@ -1,0 +1,52 @@
+*** preprocessing:
+data was loaded in using cv2, and changed to RGB format from its 
+original BGR structure.
+Then it was resized to 224x224, with 3 color channels (r,g,b), and then
+sharpened (removing blurring) using a kernel of [[0,-1,0], [-1,5,-1], [0,-1,0]].
+
+after that, the data was augmented: set input and sample mean to 0 over
+dataset, divide inputs by dataset 2d, then by its own sd, applied ZCA
+whitening, finally with random rotations/flipping/shifting
+
+this was done to a larger variety of 'problems' for the model to solve during
+training and validation.
+
+*** training:
+transfer learning was used, with 11 output nodes to correspond to 11 possible
+labels, and a learning rate of 0.01, with the Adam() optimizer from tensorflow.keras
+
+*** training report:
+from the output, an accuracy of 0.86 was achieved by the 14th epoch.
+This is fair, however may be improved by increased image sampling, or augmentation hypertuning
+
+---- post sample increase report ----
+6/8
+
+Training size 120 -> 210, batch size remains at 25.
+Testing size 40 -> 90, batch at 25
+
+6/8
+
+3 training sessions were run, maintaining 15 epochs at each session, and a learning rate of 0.01
+However, no epochs were finished due to the machine crashing by ~14th epoch. At that epoch, accuracy increased
+to 0.88, with a validation acc. of 0.7502, loss 0.31, and validation loss 1.4094
+
+---- resolution change report ----
+
+8/8
+image resized to 128x128 resolution with the same learning rate, optimizer, and pre-trained model.
+Training was done with 11 epochs, in batches of 26, 120 img - training, 40 img - testing.
+
+Imgs were normalized, resized, sharpened using the same kernel mentioned in preprocessing section, before
+being augmented due to the restricted sample size
+
+
+Overall results:
+Accuracy at the 11th epoch reached acc 0.86 with a loss of 0.42, val_loss of 1.73 and val_acc of 0.61.
+
+The model may potentiall have overfit - increasing the sample size per class to 200 *MAY* alleviate this.
+Alternatively, HOG (histogram of gradients) may be extracted from each img & then used.
+
+*** model change
+
+Model changed to SVM in `model.py` document. HOg was extracted
