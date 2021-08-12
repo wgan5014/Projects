@@ -10,7 +10,7 @@ from torch.autograd import Variable
 from torch.utils.data.sampler import SubsetRandomSampler
 from torch import nn
 
-get_label = {
+labels = {
     'articulated_truck': 0,
     'background': 1,
     'bicycle': 2,
@@ -99,7 +99,7 @@ class DS(Dataset):
         img_name = str(self.csv_ds.iloc[idx][0])
         img_path = os.path.join(self.root_dir, 'train',str(self.csv_ds.iloc[idx][1]), str(self.csv_ds.iloc[idx][0]) + '.jpg')
         image = io.imread(img_path)
-        label = get_label[self.csv_ds.iloc[idx][1]]
+        label = labels[self.csv_ds.iloc[idx][1]]
         sample = {'image': image, 'label': label}
         
         if self.transform:
