@@ -1,0 +1,61 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+        <!-- TODO Query (7)
+        Display All Relevant Podcast Episode Infromation including meta data
+        -->
+        <!-- TODO - Query (10)
+        You will have to modify the above approach slightly to make each genre clickable
+        -->
+
+        <h1 class="title">{{episode[0].podcast_episode_title}}</h1>
+        <p>Published: {{episode[0].podcast_episode_published_date}}</p>
+        <p>Length: {{episode[0].podcast_episode_length}}</p>
+
+        <h2>Artwork</h2>
+        {% for instance in episode %}
+            {% if instance.md_type_name == 'artwork' %}
+                <img src="{{instance.md_value}}" style="max-width: 30%">
+                <br />
+            {% endif %}
+        {% endfor %}
+
+        <h2>Description</h2>
+        {% for instance in episode %}
+            {% if instance.md_type_name == 'description' %}
+                <p>{{instance.md_value}}</p>
+            {% endif %}
+        {% endfor %}
+
+        <h2>Genres</h2>
+        {% for instance in episode %}
+            {% if instance.md_type_name == 'podcast genre' %}
+                <p>
+                    <a href="{{url_for('single_genre', genre_id=instance.md_value)}}">
+                        {{instance.md_value}}
+                    </a>
+                </p>
+            {% endif %}
+        {% endfor %}
+
+        <h2>Player</h2>
+        <audio id="player" controls src="{{episode[0].podcast_episode_uri}}"></audio>
+
+        {% if consumption.progress > 0 %}
+            <button class="flat" id="resumption-button" data-progress="{{consumption.progress}}">Resume from previous listening</button>
+        {% endif %}
+
+        <h2>URI</h2>
+        <p><a href="{episode[0].podcast_episode_uri}}">{{episode[0].podcast_episode_uri}}</a></p>
+    </div>
+</div>
+
+<style>
+    #player {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+</style>
+
+{% include 'bottom.html'%}
