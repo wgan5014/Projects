@@ -1,0 +1,64 @@
+{"movies": [
+  {
+    "cast": [
+      "Chris Hemsworth",
+      "Scarlett Johansson",
+      "Tom Holland",
+      "Robert Downey Jr",
+      "Chris Evens",
+      "Chris Pratt",
+      "Elizabeth Olsen",
+      "Mark Rufallo",
+      "Josh Brolin",
+      "Benedict Cumberbatch",
+      "Tom Hiddleston",
+      "Chadwick Boseman"
+    ],
+    "director": "Anthony Russo and Joe Russo",
+    "name": "Avengers: Infinity War",
+    "synopsis":"The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.",
+    "rating": "PG-13",
+    "releaseDate" :  "23/4/2018",
+    "movieID": 11111
+  },
+  {
+    "cast": [
+      "Eddie Murphy",
+      "Cameron Diaz",
+      "Mike Myers"
+    ],
+    "director": "Vicky Jenson and Andrew Adamson",
+    "name": "Shrek",
+    "synopsis": "Shrek, an ogre, embarks on a journey with a donkey to rescue Princess Fiona from a vile lord and regain his swamp.",
+    "rating": "G",
+    "releaseDate" :  "21/6/2001",
+    "movieID": 22222
+  }
+],
+  "bookings": [{ "bookingID":  789, "user": "shrekislove","showingID": 4455,"seatTypes" : {"child": 4, "student":  0, "adult":  2,"senior" :  0}, "seatPosition":  "Front"},
+    { "bookingID":  456, "user": "hanshotfirst","showingID": 9023,"seatTypes" :  {"child": 0, "student":  2, "adult":  0,"senior" :  1}, "seatPosition":  "Middle"},
+    { "bookingID":  534, "user": "hanshotfirst","showingID": 9023,"seatTypes" :  {"child": 0, "student":  1, "adult":  1,"senior" :  0}, "seatPosition":  "Middle"}
+  ],
+  "customers": [{"username": "shrekislove", "password": "shrekislife", "card" : 12309},
+    {"username": "hanshotfirst", "password": "prequelssucked", "card" : 96667},
+    {"username": "nocardperson", "password": "iforgot", "card" : null}],
+  "staff": [{"isManager":  true, "username":  "regionalmanager", "password":  "assistanttotheregionalmanager"},
+    {"isManager":  false, "username":  "melissa", "password":  "melissa"},
+    {"isManager":  false, "username":  "ishan", "password":  "ishan"},
+    {"isManager":  false, "username":  "nafi", "password":  "nafi"},
+    {"isManager":  false, "username":  "ian", "password":  "ian"},
+    {"isManager":  false, "username":  "william", "password":  "william"}
+  ],
+  "showings": [{"showingID": 4455,"movieID":  22222, "date":  "12/12/2021 14:10" ,"location": "Burwood", "screen": "Bronze"},
+    {"showingID": 1000,"movieID":  11111, "date":  "25/10/2021 17:10" ,"location": "Town Hall", "screen": "Gold"},
+    {"showingID": 9023,"movieID":  11111, "date":  "24/10/2021 8:30" ,"location": "Redfern", "screen": "Silver"}
+  ],
+  "transactions":[{"id": 5414311,"transactionState":  "User cancelled", "date": "2/11/2021 16:30", "customerUsername" : "procoder"},
+    {"id": 5414313,"transactionState":  "User cancelled", "date": "12/11/2021 23:11", "customerUsername" : "noobslayer69"},
+    {"id": 5414314,"transactionState":  "Invalid Card Usage", "date": "2/10/2021 18:14", "customerUsername" : "userperson"},
+    {"id": 5414315,"transactionState":  "Timed out", "date": "12/12/2021 9:30", "customerUsername" : null}],
+  "giftcards": [{"cardNumber": "1843271729181022GC","redeemable": true,"amount": 10.00},
+    {"cardNumber": "1234567890123457GC","redeemable": false,"amount": 10.00},
+    {"cardNumber": "1234567890123458GC","redeemable": true,"amount": 15.25},
+    {"cardNumber": "1234567890123459GC","redeemable": true,"amount": 5}]
+}
