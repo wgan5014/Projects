@@ -34,6 +34,7 @@ For a further summary, the jacoco report can be accessed through *build/reports/
 
 ## Contributors
 <p>This project could not have been possible without the help of some excellent programmers. Below lists the developers and their contributions</p>
+
  - William Gan (developer)
     - Manager transaction screen, and backend processing logic
     - Customer login screen
