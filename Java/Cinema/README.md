@@ -35,30 +35,30 @@ For a further summary, the jacoco report can be accessed through *build/reports/
 ## Contributors
 <p>This project could not have been possible without the help of some excellent programmers. Below lists the developers and their contributions</p>
  - William Gan (developer)
-  - Manager transaction screen, and backend processing logic
-  - Customer login screen
-  - CSV file maintaining information on tickets booked by customers
-  - Set up CI/CD pipeline tools on AWS virtual machine
+    - Manager transaction screen, and backend processing logic
+    - Customer login screen
+    - CSV file maintaining information on tickets booked by customers
+    - Set up CI/CD pipeline tools on AWS virtual machine
  
  - Nafi Robayat (developer)
-  - Lower-level I/O parsing and file-handling (JSON, CSV, text file types). 
-    - This formed the basis of how our system fetched and retrieved information
-  - Purchase, and transaction screen templates
-  - Idle timer in guest and customer transaction process
+    - Lower-level I/O parsing and file-handling (JSON, CSV, text file types). 
+      - This formed the basis of how our system fetched and retrieved information
+    - Purchase, and transaction screen templates
+    - Idle timer in guest and customer transaction process
  
  - Ian Chen(developer)
-  - Home screen display and processing for customer/guest login (displaying tables, hovering over icons etc.)
-  - Movie screen
+    - Home screen display and processing for customer/guest login (displaying tables, hovering over icons etc.)
+    - Movie screen
  
  - Ishan Zuaim (scrum master)
-  - Ensure agile development practices were followed
-  - Staff transaction screen
-  - Gift card screen - display and features
-  - Movie purchase screen for guests and existing customers
+    - Ensure agile development practices were followed
+    - Staff transaction screen
+    - Gift card screen - display and features
+    - Movie purchase screen for guests and existing customers
  
  - Melissa Nguyen (developer)
-  - Create GUI template files for all classes used in the entire project
-  - Pop up screen
-  - Movie screen actions
+    - Create GUI template files for all classes used in the entire project
+    - Pop up screen
+    - Movie screen actions
 
 <p>The above duties do not represent the entire contributions of any of the members involved, they are an approximation. In addition to the responsibilities listed, each member wrote tests at the unit and integration level for the software, and performed copious amounts of bug-fixing.</p>
